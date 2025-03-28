@@ -1,0 +1,139 @@
+### _Trabalho Pratico 2 - ALGORITMOS E ESTRUTURAS DE DADOS I_
+
+***
+
+<img align="right" src="https://i.pinimg.com/736x/10/a5/44/10a544bcbd14d67c1e9272ab19883feb.jpg" alt="Imagem 1" style="border-radius: 10px; margin: 5px;" width="70">
+<img align="right" src="https://i.pinimg.com/736x/e9/3a/09/e93a0947a0fab44abf7c0bbdc79f828b.jpg" alt="Imagem 2" style="border-radius: 10px; margin: 5px;" height="70">
+<img align="right" src="https://i.pinimg.com/736x/cd/c2/bd/cdc2bd48ec628071ee1e0e757e5c7131.jpg" alt="Imagem 3" style="border-radius: 10px; margin: 5px;" width="70">
+
+> _Aluna: Dienifer Bierhals Ledebuhr_ 
+ 
+> _Turma: M1 - AED_
+
+***
+
+### _1792. Maximum Average Pass Ratio_
+
+***
+
+Descrição do Trabalho Proposto:
+
+O trabalho consiste na implementação de um jogo de adivinhação de palavras, inspirado no jogo Termo. O jogo desafia o jogador a adivinhar uma palavra de 5 letras em até 6 tentativas. A cada tentativa, o jogo fornece feedback sobre a precisão da palavra inserida, indicando quais letras estão corretas e na posição correta, quais estão presentes na palavra, mas em posições incorretas, e quais letras não fazem parte da palavra.
+
+O jogo possui 365 níveis, cada um com uma palavra única a ser descoberta. O progresso do jogador é armazenado em arquivos binários, que registram o nível atual, o número de vitórias e derrotas. Além disso, o jogo valida se as palavras inseridas pelo jogador são válidas, consultando um arquivo de dicionário que contém uma lista de palavras da língua portuguesa.
+
+Descrição da implementação:
+
+1. Menu Interativo:
+
+O jogo começa com um menu que permite ao jogador escolher entre:
+
+Jogar
+
+Status
+
+Tutorial 
+
+Reiniciar o jogo
+
+Sair
+
+2. Arquivos:
+
+O jogo utiliza arquivos para armazenar:
+
+O nível atual do jogador (ArquivoNivel.bin).
+
+O número de vitórias (ArquivoVitorias.bin).
+
+O número de derrotas (ArquivoDerrotas.bin).
+
+Uma lista de 365 palavras (senhas) para os níveis (ArquivoSenhas.txt).
+
+Um dicionário de palavras válidas (ArquivoDicionario.txt), usado para validar as tentativas do jogador.
+
+3. Lógica do Jogo:
+
+O jogador insere uma palavra de 5 letras e o sistema verifica se a palavra é válida (está no dicionário). Caso seja uma palavra valida, o jogo compara a palavra inserida com a senha do nível atual e fornece feedback visual:
+
++ : Letra correta na posição correta.
+
+!  : Letra presente na palavra, mas na posição errada.
+
+- : Letra não presente na palavra.
+
+O jogador tem 6 tentativas para adivinhar a palavra.
+
+4. Uso de Strings e Vetores:
+
+Strings:
+
+O jogo faz uso de strings para armazenar e manipular palavras, como a senha do nível atual, a tentativa do jogador e as mensagens exibidas no menu e durante o jogo.
+
+Vetores:
+
+Três vetores são utilizados para armazenar o estado das verificações:
+
+VerificacaoTotal: Armazena se cada letra da tentativa está correta e na posição certa.
+
+VerificacaoParcial: Armazena se cada letra da tentativa está presente na palavra, mas em posição errada.
+
+VerificacaoLetrasUsadas: Armazena se cada letra já foi usada em tentativas anteriores.
+
+5. Laços de Execução:
+
+O jogo faz uso de laços de execução para controlar o fluxo do programa.
+
+6. Subrotinas:
+
+O jogo é modularizado em várias subrotinas, incluindo:
+
+LerEntrada: Lê a tentativa do jogador.
+
+VerificarExiste: Verifica se a palavra existe no dicionário.
+
+VerificarVitoria: Verifica se o jogador acertou a palavra.
+
+ImprimirTentativa: Exibe o resultado da tentativa.
+
+LimparVetores: Reinicia os vetores de verificação para a próxima tentativa.
+
+LerArquivoNivel, AdicionarNivel, LerArquivoVitoria, AdicionarVitoria, LerArquivoDerrota, AdicionarDerrota: Gerenciam a leitura e escrita nos arquivos de progresso.
+
+### _Codigos_
+
+***
+
+* Código desenvolvido em aula:
+  
+  * `AtividadePratica02.c`
+    
+* Código reorganizado em casa:
+
+  * `AtividadePratica02_EmCasa.c` 
+
+* Codigo da solução aceita pelo LeetCode:
+
+  * `TMMA.c`
+
+
+### _Observações e Dificuldades_
+
+***
+
+_Eu não tinha conhecimento sobre o método de "heap (fila de prioridade)". Já havia visto em alguns exercícios, mas nunca pratiquei nem entendi seu funcionamento. Por isso, tornou-se impossível resolver o exercício completamente, pois os testes do LeetCode exigem uma otimização bem elaborada._
+
+_O código que desenvolvi em aula passou em 73 de 88 testes, mas apresentou erro por "tempo de execução". Ignorando isso, acredito que tenha sido uma solução parcial, mesmo que baseada em força bruta._
+
+_Como sabia que não conseguiria avançar sem auxílio externo, marquei esse ponto como meu limite. Após essa decisão, fui pesquisar sobre como implementar um código otimizado e tentei aprender mais sobre o método. Ainda sinto que não entendi completamente, mas, com ajuda, consegui criar uma solução funcional no final._
+
+_Comentei sobre isso no vídeo, mas não expliquei detalhadamente, pois a solução não foi fruto exclusivamente dos meus conhecimentos._
+
+
+### _Testes Realizados_
+
+***
+
+ * _Os únicos testes realizados foram os do próprio LeetCode._
+
+***
