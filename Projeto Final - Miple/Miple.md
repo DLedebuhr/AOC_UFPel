@@ -1,4 +1,4 @@
-### _Trabalho Pratico 2 - ALGORITMOS E ESTRUTURAS DE DADOS I_
+### _Projeto Final - Miple_
 
 ***
 
@@ -6,51 +6,53 @@
 <img align="right" src="https://i.pinimg.com/736x/e9/3a/09/e93a0947a0fab44abf7c0bbdc79f828b.jpg" alt="Imagem 2" style="border-radius: 10px; margin: 5px;" height="70">
 <img align="right" src="https://i.pinimg.com/736x/cd/c2/bd/cdc2bd48ec628071ee1e0e757e5c7131.jpg" alt="Imagem 3" style="border-radius: 10px; margin: 5px;" width="70">
 
-> _Aluna: Dienifer Bierhals Ledebuhr_ 
+> __ 
  
-> _Turma: M1 - AED_
+> _Disciplina: Arquitetura e Organização de Computadores_
 
 ***
 
-### _1792. Maximum Average Pass Ratio_
+### _Descrição do Trabalho Proposto_
 
 ***
 
-Descrição do Trabalho Proposto:
-
-O trabalho consiste na implementação de um jogo de adivinhação de palavras, inspirado no jogo Termo. O jogo desafia o jogador a adivinhar uma palavra de 5 letras em até 6 tentativas. A cada tentativa, o jogo fornece feedback sobre a precisão da palavra inserida, indicando quais letras estão corretas e na posição correta, quais estão presentes na palavra, mas em posições incorretas, e quais letras não fazem parte da palavra.
+O trabalho consiste na implementação de um jogo de adivinhação de palavras. O jogo desafia o jogador a adivinhar uma palavra de 5 letras em até 6 tentativas. A cada tentativa, o jogo fornece feedback sobre a precisão da palavra inserida, indicando quais letras estão corretas e na posição correta, quais estão presentes na palavra, mas em posições incorretas, e quais letras não fazem parte da palavra.
 
 O jogo possui 365 níveis, cada um com uma palavra única a ser descoberta. O progresso do jogador é armazenado em arquivos binários, que registram o nível atual, o número de vitórias e derrotas. Além disso, o jogo valida se as palavras inseridas pelo jogador são válidas, consultando um arquivo de dicionário que contém uma lista de palavras da língua portuguesa.
 
-Descrição da implementação:
+### _Descrição da implementação_
 
-1. Menu Interativo:
+***
 
-O jogo começa com um menu que permite ao jogador escolher entre:
+#### 1. Menu Interativo:
 
-Jogar
+_O jogo começa com um menu que permite ao jogador escolher entre:_
 
-Status
+* _Jogar_
 
-Tutorial 
+* _Status_
 
-Reiniciar o jogo
+* _Tutorial_ 
 
-Sair
+* _Reiniciar o jogo_
 
-2. Arquivos:
+* _Sair_
 
-O jogo utiliza arquivos para armazenar:
+***
 
-O nível atual do jogador (ArquivoNivel.bin).
+#### 2. Arquivos:
 
-O número de vitórias (ArquivoVitorias.bin).
+_O jogo utiliza arquivos para armazenar:_
 
-O número de derrotas (ArquivoDerrotas.bin).
+_O nível atual do jogador (`ArquivoNivel.bin`)._
 
-Uma lista de 365 palavras (senhas) para os níveis (ArquivoSenhas.txt).
+_O número de vitórias (`ArquivoVitorias.bin`)._
 
-Um dicionário de palavras válidas (ArquivoDicionario.txt), usado para validar as tentativas do jogador.
+_O número de derrotas (`ArquivoDerrotas.bin`)._
+
+_Uma lista de 365 palavras (senhas) para os níveis (`ArquivoSenhas.txt`)._
+
+_Um dicionário de palavras válidas (`ArquivoDicionario.txt`), usado para validar as tentativas do jogador._
 
 3. Lógica do Jogo:
 
