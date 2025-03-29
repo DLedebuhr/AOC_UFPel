@@ -2,9 +2,9 @@
 
 ***
 
-<img align="right" src="https://i.pinimg.com/736x/10/a5/44/10a544bcbd14d67c1e9272ab19883feb.jpg" alt="Imagem 1" style="border-radius: 10px; margin: 5px;" width="70">
-<img align="right" src="https://i.pinimg.com/736x/e9/3a/09/e93a0947a0fab44abf7c0bbdc79f828b.jpg" alt="Imagem 2" style="border-radius: 10px; margin: 5px;" height="70">
-<img align="right" src="https://i.pinimg.com/736x/cd/c2/bd/cdc2bd48ec628071ee1e0e757e5c7131.jpg" alt="Imagem 3" style="border-radius: 10px; margin: 5px;" width="70">
+<img align="right" src="https://i.pinimg.com/736x/56/4b/02/564b02744b734c33bf946c042ca9e6f6.jpg" alt="Imagem 1" style="border-radius: 10px; margin: 5px;" width="70">
+<img align="right" src="https://i.pinimg.com/236x/9f/b1/e8/9fb1e8e85ab08839c49ad5143cf70114.jpg" alt="Imagem 2" style="border-radius: 10px; margin: 5px;" height="70">
+<img align="right" src="https://i.pinimg.com/736x/42/57/75/425775f47010855e31797f8f40efb694.jpg" alt="Imagem 3" style="border-radius: 10px; margin: 5px;" width="70">
 
 > __ 
  
@@ -24,7 +24,7 @@ O jogo possui 365 níveis, cada um com uma palavra única a ser descoberta. O pr
 
 ***
 
-#### 1. Menu Interativo:
+### 1. Menu Interativo:
 
 _O jogo começa com um menu que permite ao jogador escolher entre:_
 
@@ -40,7 +40,7 @@ _O jogo começa com um menu que permite ao jogador escolher entre:_
 
 ***
 
-#### 2. Arquivos:
+### 2. Arquivos:
 
 _O jogo utiliza arquivos para armazenar:_
 
@@ -54,21 +54,21 @@ _Uma lista de 365 palavras (senhas) para os níveis (`ArquivoSenhas.txt`)._
 
 _Um dicionário de palavras válidas (`ArquivoDicionario.txt`), usado para validar as tentativas do jogador._
 
-3. Lógica do Jogo:
+### 3. Lógica do Jogo:
 
-O jogador insere uma palavra de 5 letras e o sistema verifica se a palavra é válida (está no dicionário). Caso seja uma palavra valida, o jogo compara a palavra inserida com a senha do nível atual e fornece feedback visual:
+_O jogador insere uma palavra de 5 letras e o sistema verifica se a palavra é válida (está no dicionário). Caso seja uma palavra valida, o jogo compara a palavra inserida com a senha do nível atual e fornece feedback visual:_
 
-+ : Letra correta na posição correta.
+* _+ : Letra correta na posição correta._
 
-!  : Letra presente na palavra, mas na posição errada.
+* _!  : Letra presente na palavra, mas na posição errada._
 
-- : Letra não presente na palavra.
+* _- : Letra não presente na palavra._
 
-O jogador tem 6 tentativas para adivinhar a palavra.
+_O jogador tem 6 tentativas para adivinhar a palavra._
 
 4. Uso de Strings e Vetores:
 
-Strings:
+ _Strings:_
 
 O jogo faz uso de strings para armazenar e manipular palavras, como a senha do nível atual, a tentativa do jogador e as mensagens exibidas no menu e durante o jogo.
 
