@@ -6,7 +6,7 @@
 <img align="right" src="https://i.pinimg.com/236x/9f/b1/e8/9fb1e8e85ab08839c49ad5143cf70114.jpg" alt="Imagem 2" style="border-radius: 10px; margin: 5px;" height="70">
 <img align="right" src="https://i.pinimg.com/736x/42/57/75/425775f47010855e31797f8f40efb694.jpg" alt="Imagem 3" style="border-radius: 10px; margin: 5px;" width="70">
 
-> __ 
+> _Componentes: DLedebuhr e henriquevalezad_ 
  
 > _Disciplina: Arquitetura e Organização de Computadores_
 
@@ -44,15 +44,17 @@ _O jogo começa com um menu que permite ao jogador escolher entre:_
 
 _O jogo utiliza arquivos para armazenar:_
 
-_O nível atual do jogador (`ArquivoNivel.bin`)._
+* _O nível atual do jogador (`ArquivoNivel.bin`)._
 
-_O número de vitórias (`ArquivoVitorias.bin`)._
+* _O número de vitórias (`ArquivoVitorias.bin`)._
 
-_O número de derrotas (`ArquivoDerrotas.bin`)._
+* _O número de derrotas (`ArquivoDerrotas.bin`)._
 
-_Uma lista de 365 palavras (senhas) para os níveis (`ArquivoSenhas.txt`)._
+* _Uma lista de 365 palavras (senhas) para os níveis (`ArquivoSenhas.txt`)._
 
-_Um dicionário de palavras válidas (`ArquivoDicionario.txt`), usado para validar as tentativas do jogador._
+* _Um dicionário de palavras válidas (`ArquivoDicionario.txt`), usado para validar as tentativas do jogador._
+
+***
 
 ### 3. Lógica do Jogo:
 
@@ -66,76 +68,46 @@ _O jogador insere uma palavra de 5 letras e o sistema verifica se a palavra é v
 
 _O jogador tem 6 tentativas para adivinhar a palavra._
 
-4. Uso de Strings e Vetores:
+***
 
- _Strings:_
+### 4. Uso de Strings e Vetores:
 
-O jogo faz uso de strings para armazenar e manipular palavras, como a senha do nível atual, a tentativa do jogador e as mensagens exibidas no menu e durante o jogo.
+* ___Strings:__ O jogo faz uso de strings para armazenar e manipular palavras, como a senha do nível atual, a tentativa do jogador e as mensagens exibidas no menu e durante o jogo._
 
-Vetores:
+* ___Vetores:__ Três vetores são utilizados para armazenar o estado das verificações:_
 
-Três vetores são utilizados para armazenar o estado das verificações:
+   * _VerificacaoTotal: Armazena se cada letra da tentativa está correta e na posição certa._
 
-VerificacaoTotal: Armazena se cada letra da tentativa está correta e na posição certa.
+   * _VerificacaoParcial: Armazena se cada letra da tentativa está presente na palavra, mas em posição errada._
 
-VerificacaoParcial: Armazena se cada letra da tentativa está presente na palavra, mas em posição errada.
-
-VerificacaoLetrasUsadas: Armazena se cada letra já foi usada em tentativas anteriores.
-
-5. Laços de Execução:
-
-O jogo faz uso de laços de execução para controlar o fluxo do programa.
-
-6. Subrotinas:
-
-O jogo é modularizado em várias subrotinas, incluindo:
-
-LerEntrada: Lê a tentativa do jogador.
-
-VerificarExiste: Verifica se a palavra existe no dicionário.
-
-VerificarVitoria: Verifica se o jogador acertou a palavra.
-
-ImprimirTentativa: Exibe o resultado da tentativa.
-
-LimparVetores: Reinicia os vetores de verificação para a próxima tentativa.
-
-LerArquivoNivel, AdicionarNivel, LerArquivoVitoria, AdicionarVitoria, LerArquivoDerrota, AdicionarDerrota: Gerenciam a leitura e escrita nos arquivos de progresso.
-
-### _Codigos_
+   * _VerificacaoLetrasUsadas: Armazena se cada letra já foi usada em tentativas anteriores._
 
 ***
 
-* Código desenvolvido em aula:
-  
-  * `AtividadePratica02.c`
-    
-* Código reorganizado em casa:
+### 5. Laços de Execução:
 
-  * `AtividadePratica02_EmCasa.c` 
-
-* Codigo da solução aceita pelo LeetCode:
-
-  * `TMMA.c`
-
-
-### _Observações e Dificuldades_
+_O jogo faz uso de laços de execução para controlar o fluxo do programa._
 
 ***
 
-_Eu não tinha conhecimento sobre o método de "heap (fila de prioridade)". Já havia visto em alguns exercícios, mas nunca pratiquei nem entendi seu funcionamento. Por isso, tornou-se impossível resolver o exercício completamente, pois os testes do LeetCode exigem uma otimização bem elaborada._
+### 6. Subrotinas:
 
-_O código que desenvolvi em aula passou em 73 de 88 testes, mas apresentou erro por "tempo de execução". Ignorando isso, acredito que tenha sido uma solução parcial, mesmo que baseada em força bruta._
+_O jogo é modularizado em várias subrotinas, incluindo:_
 
-_Como sabia que não conseguiria avançar sem auxílio externo, marquei esse ponto como meu limite. Após essa decisão, fui pesquisar sobre como implementar um código otimizado e tentei aprender mais sobre o método. Ainda sinto que não entendi completamente, mas, com ajuda, consegui criar uma solução funcional no final._
+* _LerEntrada: Lê a tentativa do jogador._
 
-_Comentei sobre isso no vídeo, mas não expliquei detalhadamente, pois a solução não foi fruto exclusivamente dos meus conhecimentos._
+* _VerificarExiste: Verifica se a palavra existe no dicionário._
 
+* _VerificarVitoria: Verifica se o jogador acertou a palavra._
 
-### _Testes Realizados_
+* _ImprimirTentativa: Exibe o resultado da tentativa._
+
+* _LimparVetores: Reinicia os vetores de verificação para a próxima tentativa._
+
+* _LerArquivoNivel, AdicionarNivel, LerArquivoVitoria, AdicionarVitoria, LerArquivoDerrota, AdicionarDerrota: Gerenciam a leitura e escrita nos arquivos de progresso._
 
 ***
 
- * _Os únicos testes realizados foram os do próprio LeetCode._
+### _Observações_
 
-***
+_Todos os arquivos devem estar na mesma pasta, e o caminho para eles no arquivo principal deve ser atualizado de acordo com o novo local._
